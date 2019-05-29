@@ -1,0 +1,35 @@
+<!--pages/mine_notice/mine_notice.wxml-->
+
+<view class="mine_notice container_width91" >
+  <view class="notice_list" >
+    <view class="notice_item {{ item['status']?'isread':'' }}" wx:for="{{ noticeList }}" wx:key="index" data-id="{{ item['id'] }}" bindtap="showDetails">
+      <view class="item_icon">
+        <image class="icon_image" src="{{ item['icon'] }}"></image>
+        <view class="item_status {{ item['status']?'isread':'' }}"></view>
+      </view>
+      <view class="item_info">
+        <view class="info_title">{{ item['title'] }}</view>
+        <view class="info_description">
+          {{ item['description'] }}
+        </view>
+      </view>
+      <image class="item_delete" src="/resource/trash.png"></image>
+    </view>
+  </view>
+  <view class="notice_details_win" style="display:{{ noticeDetailsWin['id']?'block':'none' }};height:{{ screenHeight }}" catchtap="hiddenDetails" catchtouchmove="true" >
+    <view class="notice_details container_width91" data-id="keepShow" catchtap="showDetails">
+      <image src="{{ noticeDetailsWin['icon'] }}" class="details_icon"></image>
+      <view class="details_deteline">{{ noticeDetailsWin['dateline'] }}</view>
+      <view class="details_title">{{ noticeDetailsWin['title'] }}</view>
+      <view class="details_content">
+          {{ noticeDetailsWin['content'] }}
+      </view>
+      <view class="details_btn">
+        <view class="notice_delete btn">Delete</view>
+        <view class="details_colse btn" bindtap="hiddenDetails">
+          Close
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

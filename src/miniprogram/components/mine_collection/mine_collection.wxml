@@ -1,0 +1,5 @@
+<!--components/mine_collection/mine_collection.wxml-->
+
+<view class="mine_collection container_width91">
+  <collection_normal_com listData="{{ workslist }}"></collection_normal_com>
+</view>

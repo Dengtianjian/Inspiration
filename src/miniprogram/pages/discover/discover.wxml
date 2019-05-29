@@ -1,0 +1,37 @@
+<!--pages/discover/discover.wxml-->
+<view class="container_width91">
+  <search_com></search_com>
+  <view class="title_normal">
+    <view class="main" data-ishow="true" bindtap="displayTypeWin">
+      {{ type['currentText'] }}
+      <image class="more_under" src="/resource/more_under.png"></image>
+    </view>
+    <view class="sub" data-displaymode="1" bindtap="displaySortWin">
+      {{ sort['modeText'] }}
+    </view>
+  </view>
+  <worklist_normal_com class="worklist_normal"></worklist_normal_com>
+  <view class="type_win" style="display:{{ type['ishow']?'block':'none' }}">
+    <view class="type_list_wrap">
+      <scroll-view scroll-y class="type_list">
+        <view data-text="全部" bindtap="changeType" class="tpye_item {{ type['current']==null?'current':'' }}">
+          全部
+        </view>
+        <view class="tpye_item {{ type['current']==index?'current':'' }}" wx:for="{{ type['list'] }}" wx:key="index" data-text="{{ item['text'] }}" bindtap="changeType">
+          {{ item['text'] }}
+        </view>
+      </scroll-view>
+      <view class="win_close" data-ishow="false" bindtap="displayTypeWin">
+        Close
+      </view>
+    </view>
+  </view>
+  <view class="sort_win" style="display:{{ sort['ishow']?'block':'none' }}" >
+    <view class="sort_win_wrap">
+      <view data-displaymode="hidden" data-modetext="{{ item['text'] }}" data-mode="{{ item['mode'] }}" class="sort_item {{ sort['mode']==item['mode']?'current':'' }}" bindtap="displaySortWin" wx:for="{{ sort['list'] }}" wx:key="index">
+        {{ item['text'] }}
+      </view>
+    </view>
+    <view class="sort_win_mask" data-displaymode="0" catchtap="displaySortWin"></view>
+  </view>
+</view>

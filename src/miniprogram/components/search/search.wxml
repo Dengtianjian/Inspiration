@@ -1,0 +1,18 @@
+<!--components/search/search.wxml-->
+
+<view class="search">
+  <view class="form">
+    <input type="text" class="keyword" placeholder="Enter what you think" value="{{ keyword }}" comfirm-type="search" bindfocus="showHistory"></input>
+    <image src="/resource/search_icon.png" class="icon"></image>
+  </view>
+  <view class="history" style="display:{{ history['ishow']?'block':'none' }}">
+    <view class="his_item" wx:for="{{ history['keywords'] }}" wx:key="index">
+      <view class="keyword" data-keyword="{{ item['keyword'] }}" bindtap="search">
+        {{ item['keyword'] }}
+      </view>
+      <view class="delete" data-index="{{ index }}" data-id="{{ index }}" bindtap="deleteHistory">
+        <image src="/resource/delete.png" class="delete_icon"></image>
+      </view>
+    </view>
+  </view>
+</view>

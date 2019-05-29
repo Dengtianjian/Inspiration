@@ -1,0 +1,47 @@
+<!--pages/profile/profile.wxml-->
+
+<view id="profile" class="container">
+  <view class="container_width91">
+    <view class="head_module">
+      <view class="avatar">
+        <image mode="aspectFill" src="/resource/default_avatar.png" class="image"></image>
+      </view>
+      <view class="right">
+        <view class="username">Administrator</view>
+        <view class="statistics">
+          <view class="fans sta_item">
+            123456
+            <p>Fans</p>
+          </view>
+          <view class="works sta_item">
+            456789
+            <p>Works</p>
+          </view>
+          <view class="likes sta_item">
+            789123
+            <p>Likes</p>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="attention">
+      Attention
+    </view>
+  </view>
+  <view class="profilelist_container">
+    <view class="container_width91">
+      <view class="profile_list topbottom_list">
+        <view class="tb_item" wx:for="{{ userPorfile }}" wx:key="index">
+          <view class="tb_title">{{ item['title'] }}</view>
+          <view class="tb_content">
+            {{ item['value'] }}
+          </view>
+        </view>
+      </view>
+      <navigator class="edit_btn" url="./edit/edit" >
+        Edit profile
+      </navigator>
+    </view>
+  </view>
+  <image mode="aspectFill" class="user_bg" src="http://img.uigreat.com/FjMoWAVyM71c3x1j7wKVwGkXTs0q"></image>
+</view>

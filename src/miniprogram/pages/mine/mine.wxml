@@ -1,0 +1,17 @@
+<!--pages/mine/mine.wxml-->
+<view class="mine_container" >
+  <view class="nav_switchbar_container">
+    <scroll-view scroll-x class="nav_switchbar container_width91" >
+      <view class="nav_item {{ currentNav==0?'current':'' }}" data-navindex="0" bindtap="switchNav">works</view>
+      <view class="nav_item {{ currentNav==1?'current':'' }}" data-navindex="1" bindtap="switchNav">collection</view>
+      <view class="nav_item {{ currentNav==2?'current':'' }}" data-navindex="2" bindtap="switchNav">attention</view>
+      <view class="nav_item {{ currentNav==3?'current':'' }}" data-navindex="3" bindtap="switchNav">notice</view>
+    </scroll-view>
+  </view>
+  <view class="nav_content" >
+    <mine_works_com wx:if="{{ currentNav==0 }}" class="works_collection"></mine_works_com>
+    <mine_collection_com wx:if="{{ currentNav==1 }}" class="collection"></mine_collection_com>
+    <mine_attention_com wx:if="{{ currentNav==2 }}" class="attention_list"></mine_attention_com>
+    <mine_notice_com wx:if="{{ currentNav==3 }}" class="notice"></mine_notice_com>
+  </view>
+</view>

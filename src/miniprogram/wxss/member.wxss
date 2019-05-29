@@ -1,0 +1,72 @@
+
+.welcome_text {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  height:280rpx;
+  color:#353535;
+  font-size:80rpx;
+  background:#F5F5F5;
+}
+.welcome_text .light {
+  color:#888;
+  font-size:60rpx;
+}
+
+.title_cus {
+  display:flex;
+  justify-content:flex-start;
+  align-content: center;
+  margin:40rpx 0 80rpx;
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+}
+
+.title_cus .main {
+  color:#666;
+  font-size:40rpx;
+}
+
+.title_cus .sub {
+  margin-left:60rpx;
+  color:#888;
+  font-size:30rpx;
+}
+
+.form .tb_item .tb_title {
+  color:#353535;
+}
+
+.form .tb_item .tb_content {
+  width:90%;
+}
+
+.form .submit_btn {
+  margin-top:60rpx;
+}
+
+.third_party {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  margin-top:80rpx;
+  width:100%;
+}
+
+.third_party .tp_item {
+  margin:0 20rpx;
+  width:80rpx;
+  height:80rpx;
+  border-radius:50%;
+  background:red;
+}
+
+.third_party .tp_item.wechat {
+  background-color:#2DC100;
+}
+.third_party .tp_item.backhome {
+  padding:23rpx;
+  background-color:#FBD952;
+  box-sizing:border-box;
+}

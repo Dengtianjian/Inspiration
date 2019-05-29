@@ -1,0 +1,3 @@
+/* components/mine_works/mine_works.wxss */
+
+@import "/app.wxss";

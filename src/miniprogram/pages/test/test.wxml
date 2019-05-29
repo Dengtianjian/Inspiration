@@ -1,0 +1,6 @@
+<!--pages/test/test.wxml-->
+
+<view class="container_width91">
+  <typesetting_editor></typesetting_editor>
+</view>
+

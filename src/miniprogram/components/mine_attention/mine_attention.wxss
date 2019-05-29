@@ -1,0 +1,63 @@
+/* components/mine_attention/mine_attention.wxss */
+
+@import "/app.wxss";
+
+.user_list {
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.user_item {
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  position:relative;
+  margin-bottom:20rpx;
+  width:330rpx;
+  height:320rpx;
+  background-color:white;
+}
+
+.user_item .user_bg {
+  position:absolute;
+  top:0;
+  left:0;
+  height:270rpx;
+  width:100%;
+  background:#F0F0F0;
+}
+
+.user_item .user_avatar {
+  position:relative;
+  margin-top:56rpx;
+  width:120rpx;
+  height:120rpx;
+  border-radius:50%;
+  border:6rpx solid white;
+  box-sizing:border-box;
+}
+
+.user_item .username {
+  position:relative;
+  margin:12rpx 0 28rpx;
+  height:30rpx;
+  line-height:30rpx;
+  width:190rpx;
+  font-size:30rpx;
+  text-align:center;
+  color:white;
+  text-shadow:1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.user_item .cancel_attention {
+  position:relative;
+  width:280rpx;
+  height:50rpx;
+  line-height:50rpx;
+  font-size:26rpx;
+  text-align:center;
+  color:#999;
+  background:white;
+  box-shadow:0 10rpx 20rpx rgba(50,50,50,0.2);
+}

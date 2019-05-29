@@ -1,0 +1,3 @@
+/* pages/mine_collection/mine_collection.wxss */
+
+@import "/app.wxss";

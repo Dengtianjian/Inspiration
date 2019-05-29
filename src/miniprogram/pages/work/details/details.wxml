@@ -1,0 +1,41 @@
+<!--pages/work/details/details.wxml-->
+
+<view class="work_details">
+  <view class="container_width91">
+    <view class="title_normal">
+      This is work title👏
+    </view>
+    <view class="content_wrap">
+
+    </view>
+  </view>
+  <view class="work_operate">
+    <view class="work_operate_wrap container_width91">
+      <view class="operate_left">
+        <image src="/resource/like.png" class="like"></image>
+        <view class="info">
+          <view class="likecount">
+            123
+          </view>
+          <view class="dateline">
+            2019-01-01
+          </view>
+        </view>
+      </view>
+      <view class="operate_right">
+        <image src="/resource/collect_yes.png" class="collect"></image>
+      </view>
+    </view>
+  </view>
+  <view class="work_author">
+    <view class="work_author_wrap container_width91">
+      <image src="http://127.0.0.1:83/uc_server/avatar.php?uid=1&size=small" class="avatar"></image>
+      <view class="username">
+        Username
+      </view>
+      <view class="attention">
+        Attention
+      </view>
+    </view>
+  </view>
+</view>

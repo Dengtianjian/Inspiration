@@ -1,0 +1,13 @@
+/* pages/login/login.wxss */
+
+@import "/wxss/member.wxss";
+
+.login_other {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  width:100%;
+  height:40rpx;
+  color:#888;
+  font-size:26rpx;
+}

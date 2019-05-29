@@ -1,0 +1,23 @@
+<!--pages/show/show.wxml-->
+
+<view class="container_width91" >
+  <search_com></search_com>
+  <swiper class="banner" autoplay circular indicator-dots>
+    <swiper-item class="item" wx:for="{{ swiperItem }}" wx:key="index">
+      <image mode="aspectFill" class="image" src="{{ item['image'] }}" ></image>
+    </swiper-item>
+  </swiper>
+  <view class="hotwork_list">
+    <view class="title_normal">
+      <view class="main">
+        title
+      </view>
+      <view class="sub">
+        sub
+      </view>
+    </view>
+    <worklist_normal_com class="worklist_normal_com"></worklist_normal_com>
+  </view>
+</view>
+
+

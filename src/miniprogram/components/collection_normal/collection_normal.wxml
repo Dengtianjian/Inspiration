@@ -1,0 +1,29 @@
+<view class="collection">
+  <view class="collection_list">
+    <navigator url="/pages/modify/modify" class="collection_item addnew" >
+      <image src="/resource/collection_addnew.png" class="icon"></image>
+    </navigator>
+    <view class="collection_item" wx:for="{{ listData['data'] }}" wx:for-item="list" wx:for-index="listIndex" wx:key="listIndex">
+      <view class="cover_list" wx:for="{{ list['coverlist'] }}" wx:for-item="coverlist" wx:for-index="coverIndex" wx:key="coverIndex">
+        <image class="cover" mode="aspectFill" src="{{ coverlist }}"></image>
+      </view>
+      <view class="item_info">
+        <view class="item_name">{{ list['name'] }}</view>
+        <view class="item_statistics">
+          <view class="item_count">{{ list['count'] }}</view>
+          <view class="item_dateline">{{ list['dateline'] }}</view>
+        </view>
+      </view>
+      <view class="item_operate">
+        <view class="operate_btn" data-id="{{ list['id'] }}" bindtap="displayOperateMenu">
+          <image class="icon" mode="widthFix" src="/resource/seting.png"></image>
+        </view>
+        <view class="operate_menu" style="display:{{ operateMenu['showID']==list['id']?'block':'none' }}">
+          <view class="menu_item menu_edit">Edit</view>
+          <view class="menu_item menu_delete">Delete</view>
+          <view class="menu_item menu_delete" data-id="null" bindtap="displayOperateMenu">Close</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

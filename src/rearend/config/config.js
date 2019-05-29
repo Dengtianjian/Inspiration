@@ -1,0 +1,10 @@
+module.exports={
+  port:666,
+  db:{
+    host:"localhost",
+    port:27017,
+    name:"inspiration",
+    user:"ins",
+    pass:"123456"
+  }
+}

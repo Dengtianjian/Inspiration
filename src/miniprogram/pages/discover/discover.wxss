@@ -1,0 +1,107 @@
+/* pages/discover/discover.wxss */
+
+.title_normal {
+  margin:50rpx 0 40rpx;
+}
+
+.title_normal .more_under {
+  width:25rpx;
+  height:25rpx;
+}
+
+/* 类型弹窗 */
+.type_win {
+  position:fixed;
+  z-index:6;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.4);
+}
+
+.type_win .win_close {
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+  font-size:40rpx;
+  text-align:center;
+  box-shadow:0 -5rpx 10rpx rgba(0,0,0,0.15);
+}
+
+.type_list_wrap {
+  position:absolute;
+  left:0;
+  right:0;
+  margin:130rpx auto 0;
+  width:630rpx;
+  max-height:80%;
+  background:white;
+  box-sizing:border-box;
+}
+
+.type_list {
+  padding:20rpx;
+  height:720rpx;
+  width:100%;
+  padding-bottom:20rpx;
+  overflow:hidden;
+}
+
+.tpye_item {
+  width:100%;
+  height:70rpx;
+  line-height:70rpx;
+  font-size:30rpx;
+  color:#666;
+}
+
+.tpye_item.current {
+  color:#E64340;
+}
+
+/* 排序弹窗 */
+.sort_win {
+  position:fixed;
+  z-index:6;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:transparent;
+  overflow:hidden;
+}
+
+.sort_win .sort_win_mask {
+  position:absolute;
+  z-index:5;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:transparent;
+}
+
+.sort_win_wrap {
+  position:absolute;
+  z-index:6;
+  right:34rpx;
+  top:230rpx;
+  min-width:230rpx;
+  padding:10rpx 20rpx;
+  color:#666;
+  background:white;
+  box-sizing:border-box;
+  box-shadow:0 10rpx 20rpx rgba(0,0,0,0.4);
+}
+
+.sort_win_wrap .sort_item {
+  width:100%;
+  height:70rpx;
+  line-height:70rpx;
+  font-size:32rpx;
+}
+
+.sort_win_wrap .sort_item.current {
+  color:#E64340;
+}

@@ -1,0 +1,93 @@
+.container_width91 { /* 全局宽度加左右padding */
+  margin:0 auto;
+  width:91%;
+  overflow:hidden;
+  box-sizing:border-box;
+}
+
+/* 按钮 */
+
+/* 常规 */
+.button_normal {
+  width:100%;
+  height:60rpx;
+  line-height:60rpx;
+  font-size:30rpx;
+  text-align:center;
+  border-radius:6rpx;
+  box-sizing:border-box;
+}
+/* 色系09BB07 */
+.button_09BB07 {
+  color:white;
+  background-color:#09BB07;
+}
+/* 色系576b95 */
+.button_576b95 {
+  color:white;
+  background-color:#576b95;
+}
+
+/* 双按钮 左右 */
+.button_lr_normal {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+  background-color:#F5F5F5;
+}
+
+.button_lr_normal .button_item {
+  width:50%;
+  height:inherit;
+  text-align:center;
+  font-size:30rpx;
+  color:#353535;
+}
+
+.button_lr_normal .right_button {
+  color:white;
+  background:#2DC100;
+}
+
+/* 常规标题 */
+.title_normal {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  height:60rpx;
+  width:100%;
+}
+.title_normal .main {
+  font-weight:normal;
+  font-size:40rpx;
+}
+.title_normal .sub {
+  font-size:32rpx;
+  color:#999;
+}
+
+/* 上标题下内容 列表 */
+.topbottom_list .tb_item {
+  margin-bottom:15rpx;
+  padding-bottom:10rpx;
+  border-bottom:1px solid #EEE;
+}
+.topbottom_list .tb_item .tb_title {
+  display:flex;
+  align-items:center;
+  height:60rpx;
+  font-size:32rpx;
+  color:#666;
+}
+
+.topbottom_list .tb_item .tb_content {
+  display:flex;
+  align-items:center;
+  margin-left:32rpx;
+  height:60rpx;
+  font-size:32rpx;
+  color:#333;
+}

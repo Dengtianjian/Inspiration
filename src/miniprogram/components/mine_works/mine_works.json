@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "collection_normal_com":"../collection_normal/collection_normal"
+  }
+}

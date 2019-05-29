@@ -1,0 +1,12 @@
+<!--pages/work/modify/modify.wxml-->
+
+<view class="work_modify">
+  <view class="container_width91">
+    <view class="title_normal work_title">
+      This is work title
+    </view>
+    <view class="modify_wrap">
+      <typesetting_editor bindtransport="editorOperate"></typesetting_editor>
+    </view>
+  </view>
+</view>

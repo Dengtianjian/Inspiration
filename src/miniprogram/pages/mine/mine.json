@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mine_works_com":"/components/mine_works/mine_works",
+    "mine_collection_com":"/components/mine_collection/mine_collection",
+    "mine_attention_com":"/components/mine_attention/mine_attention",
+    "mine_notice_com":"/components/mine_notice/mine_notice"
+  }
+}

@@ -1,0 +1,33 @@
+<!--pages/register/register.wxml-->
+
+<view class="register member_container">
+  <view class="welcome_text">
+    <view class="container_width91">
+      <view class="light">Welcome to</view>
+      <view class="name">Inspiration</view>
+    </view>
+  </view>
+  <view class="container_width91">
+    <view class="title_cus">
+      <view class="main">Register</view>
+      <navigator open-type="redirect" url="../login/login" class="sub">I have a account</navigator>
+    </view>
+    <form class="form topbottom_list">
+      <view class="tb_item">
+        <view class="tb_title">Email</view>
+        <input type="text" class="tb_content" placeholder="plase enter your email" />
+      </view>
+      <view class="tb_item">
+        <view class="tb_title">Password</view>
+        <input type="text" class="tb_content" placeholder="plase enter your password" />
+      </view>
+      <button class="submit_btn" type="primary" form-type="submit">Submit</button>
+    </form>
+    <view class="third_party">
+      <image src="/resource/wechat.png" class="wechat tp_item"></image>
+      <navigator open-type="redirect" url="../show/show" >
+        <image src="/resource/backhome.png" class="backhome tp_item"></image>
+      </navigator>
+    </view>
+  </view>
+</view>

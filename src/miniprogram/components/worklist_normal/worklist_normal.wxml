@@ -1,0 +1,23 @@
+<!--components/worklist_normal/worklist_normal.wxml-->
+
+<view class="worklist">
+  <view class="work_list">
+    <view class="work_item" wx:for="{{ worklist }}" wx:key="index">
+        <image class="cover" src="{{ item['cover'] }}"></image>
+        <view class="title">
+          {{ item['title'] }}
+        </view>
+        <view class="statistics">
+          <view class="view statistics_item">
+            <image class="icon view_icon" src="/resource/view.png"></image>
+            {{ item['view'] }}
+          </view>
+          <view class="comments statistics_item">
+            <image class="icon" src="/resource/comments.png"></image>
+            {{ item['comments'] }}
+          </view>
+        </view>
+      </view>
+  </view>
+  <view class="loadmore">MORE</view>
+</view>

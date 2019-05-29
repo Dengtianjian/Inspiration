@@ -1,0 +1,43 @@
+/* pages/mine/mine.wxss */
+
+.mine_container {
+  padding-bottom:60rpx;
+}
+
+.nav_switchbar_container {
+  height:70rpx;
+}
+
+.nav_switchbar {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:5;
+  display:flex;
+  align-items:center;
+  margin:auto;
+  height:70rpx;
+  white-space: nowrap;
+  background:white;
+}
+
+.nav_switchbar .nav_item {
+  display:inline-block;
+  margin-right:40rpx;
+  height:70rpx;
+  line-height:70rpx;
+  font-size:30rpx;
+  color:#888;
+}
+
+.nav_switchbar .nav_item.current {
+  position:relative;
+  color:#353535;
+  transition:all 0.4s linear;
+}
+
+.nav_content {
+  margin-top:20rpx;
+  min-height:100%;
+}

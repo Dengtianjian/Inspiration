@@ -1,0 +1,13 @@
+<!--components/mine_attention/mine_attention.wxml-->
+<view class="attention container_width91">
+  <view class="user_list">
+    <view class="user_item" wx:for="{{ attentionList }}" wx:key="index">
+      <image class="user_bg" mode="aspectFill" src="{{ item['bgImage'] }}"></image>
+      <image class="user_avatar" mode="aspectFill" src="{{ item['avatar'] }}"></image>
+      <view class="username">{{ item['username'] }}</view>
+      <view class="cancel_attention">
+        Cancel
+      </view>
+    </view>
+  </view>
+</view>

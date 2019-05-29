@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "search_com":"/components/search/search",
+    "worklist_normal_com":"/components/worklist_normal/worklist_normal"
+  }
+}

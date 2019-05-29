@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "typesetting_editor": "/components/typesetting_editor/typesetting_editor"
+  }
+}

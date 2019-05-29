@@ -1,0 +1,112 @@
+/* pages/work/details/details.wxss */
+
+/* 内容容器 */
+.content_wrap {
+  width:100%;
+  min-height:600rpx;
+  margin:40rpx 0 50rpx;
+  background-color:#F5F5F5;
+}
+
+.work_details .title_normal {
+  font-size:50rpx;
+}
+
+/* 用户操作 */
+.work_operate {
+  width:100%;
+  height:200rpx;
+  background-color:#FAFAFA;
+}
+
+.work_operate_wrap {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  height:100%;
+}
+
+.operate_left {
+  display:flex;
+}
+
+.operate_left .like {
+  padding:30rpx;
+  width:100rpx;
+  height:100rpx;
+  background-color:white;
+  border-radius:50%;
+}
+
+.operate_left .info {
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  margin-left:26rpx;
+}
+
+.operate_left .likecount {
+  width:210rpx;
+  height:50rpx;
+  line-height:50rpx;
+  font-size:40rpx;
+  color:#666;
+}
+
+.operate_left .dateline {
+  margin-top:14rpx;
+  width:210rpx;
+  height:40rpx;
+  line-height:40rpx;
+  font-size:30rpx;
+  color:#999;
+}
+
+.operate_right {
+  margin-left:120rpx;
+}
+
+.operate_right .collect {
+  width:60rpx;
+  height:60rpx;
+}
+
+/* 作者模块 */
+.work_author {
+  padding:20rpx 20rpx 60rpx;
+  margin-top:80rpx;
+  box-sizing: border-box;
+}
+
+.work_author_wrap {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.work_author .avatar {
+  width:130rpx;
+  height:130rpx;
+  border-radius:50%;
+}
+
+.work_author .username {
+  margin:20rpx 0;
+  width:280rpx;
+  height:50rpx;
+  line-height:50rpx;
+  text-align:center;
+  font-size:36rpx;
+  text-overflow:ellipsis;
+  overflow:hidden;
+}
+
+.work_author .attention {
+  width:60%;
+  height:50rpx;
+  line-height:50rpx;
+  text-align:center;
+  font-size:26rpx;
+  background:#F5F5F5;
+  border-radius:6rpx;
+}

@@ -1,0 +1,80 @@
+<!--components/typesetting_editor/typesetting_editor.wxml-->
+<view class="typesetting">
+  <view class="element_list">
+    <view class="element_item {{ item['type']=='image'?'element_image':'element_textarea' }}" wx:for="{{ elementList }}"
+      wx:key="index">
+      <view class="add_area" data-show="1" data-index="{{ index }}" data-location="0" bindtap="displaySelectTypeWin">
+        添加
+      </view>
+      <block wx:if="{{ item['type']=='image' }}">
+        <image mode="widthFix" src="{{ item['content'] }}" data-src="{{ item['content'] }}" bindtap="previeImage">
+        </image>
+        <view class="image_operate">
+          <view class="delete_btn operate_btn" data-index="{{ index }}" bindtap="deleteElement">
+            Delete
+          </view>
+          <view class="change_btn operate_btn" data-index="{{ index }}" bindtap="changeImage">
+            Change
+          </view>
+        </view>
+      </block>
+      <block wx:else="{{ item['type']=='textarea' }}">
+        <textarea auto-height placeholder="在这里输入文字，留空即为删除" data-index="{{ index }}" class="type_textarea"
+          value="{{ item['content'] }}" bindinput="inputTextarea" />
+        </block>
+      <!-- <view class="add_area" data-index="{{ index }}" data-location="1" bindtap="addNew">
+        后
+      </view> -->
+    </view>
+  </view>
+  <view class="add_area" data-show="1" data-index="{{ elementList.length+1 }}" data-location="1" bindtap="displaySelectTypeWin">
+    添加
+  </view>
+  <cover-view class="newele_type_win" style="display:{{ elementType['show']?'block':'none' }}">
+      <cover-view class="win_mask" data-show="0" bindtap="displaySelectTypeWin"></cover-view>
+    <cover-view class="newele_type_wrap">
+      <cover-view class="type_item type_image" bindtap="chooseImage">
+        <cover-image class="type_icon" src="/resource/type_image.png"></cover-image>
+      </cover-view>
+      <cover-view class="type_item type_text" bindtap="addTextarea">
+        <cover-image class="type_icon" src="/resource/type_text.png"></cover-image>
+      </cover-view>
+    </cover-view>
+  </cover-view>
+  <cover-view class="add_newimage_win" wx:if="">
+    <cover-view class="newimage_wrap">
+      <cover-view scroll-y class="preview {{ imageWin['list'].length?'preview':'preview_empty' }}">
+        <cover-view class="image_item" wx:for="{{ imageWin['list'] }}" wx:key="index">
+          <cover-image src="{{ item }}" mode="widthFix" ></cover-image>
+          <cover-view class="operate_area">
+            <cover-view class="delete operate_item">
+              Delete
+            </cover-view>
+            <cover-view class="change operate_item">
+              Change
+            </cover-view>
+          </cover-view>
+        </cover-view>
+      </cover-view>
+      <cover-view class="choose_image_btn button_normal button_576b95" bindtap="chooseImage">
+        ({{ imageWin['list'].length }})Choose image
+      </cover-view>
+      <cover-view class="button_lr_normal comfirm_button_area">
+        <cover-view class="button_item left_button" bindtap="hiddenSelectImage">
+          Cancel
+        </cover-view>
+        <cover-view class="button_item right_button" bindtap="comfirmSelectImage">
+          Confirm
+        </cover-view>
+      </cover-view>
+    </cover-view>
+  </cover-view>
+  <view class="button_lr_normal save_operate_btn">
+    <view class="button_item left_button" data-mode="0" bindtap="transport">
+      Draft
+    </view>
+    <view class="button_item right_button" data-mode="1" bindtap="transport">
+      Save
+    </view>
+  </view>
+</view>

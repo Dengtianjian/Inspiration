@@ -1,0 +1,121 @@
+
+
+.collection_list {
+  display:flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+
+.collection_list .collection_item {
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  margin-bottom:20rpx;
+  width:330rpx;
+  height:420rpx;
+  overflow:hidden;
+  box-sizing:border-box;
+}
+.collection_list .collection_item.addnew {
+  justify-content: center;
+  align-items:center;
+  background:rgba(50,50,50,0.4);
+}
+
+.collection_item .icon {
+  width:160rpx;
+  height:160rpx;
+}
+
+.collection_item .cover {
+  position:absolute;
+  z-index:-1;
+  top:-10rpx;
+  left:-10rpx;
+  width:110%;
+  height:110%;
+  filter: blur(2px);
+}
+
+.collection_item .item_info {
+  position:absolute;
+  bottom:0;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  padding:0 10rpx;
+  width:100%;
+  height:110rpx;
+  background:rgba(50,50,50,0.4);
+  box-sizing:border-box;
+}
+
+.collection_item .item_name {
+  height:42rpx;
+  line-height:42rpx;
+  font-size:32rpx;
+  text-overflow:ellipsis;
+  color:#FFF;
+  overflow:hidden;
+}
+
+.collection_item .item_statistics {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  margin-top:20rpx;
+  width:100%;
+  height:30rpx;
+  line-height:30rpx;
+  font-size:20rpx;
+  color:#F0F0F0;
+}
+
+.collection_item .item_statistics view {
+  text-overflow:ellipsis;
+  overflow:hidden;
+}
+.collection_item .item_statistics view.item_count {
+  width:40%;
+}
+.collection_item .item_statistics view.item_dateline {
+  width:60%;
+  text-align:right;
+}
+
+.item_operate {
+  position:absolute;
+  top:24rpx;
+  right:24rpx;
+}
+
+.item_operate .operate_btn {
+  width:42rpx;
+  height:42rpx;
+}
+.item_operate .operate_btn .icon {
+  width:100%;
+  height:100%;
+}
+
+.item_operate .operate_menu {
+  display:none;
+  position:absolute;
+  top:52rpx;
+  right:0;
+  padding:10rpx 20rpx;
+  width:280rpx;
+  background:#FFF;
+  box-sizing:border-box;
+  border-radius:6rpx;
+  box-shadow:0 10rpx 20rpx rgba(50,50,50,0.6);
+}
+
+.item_operate .operate_menu .menu_item {
+  height:60rpx;
+  line-height:60rpx;
+  width:100%;
+  font-size:30rpx;
+  color:#353535;
+  box-sizing:border-box;
+}

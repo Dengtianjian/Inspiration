@@ -1,0 +1,66 @@
+<!--pages/profile/edit.wxml-->
+
+<view id="profile" class="container">
+  <view class="container_width91">
+    <view class="head_module">
+      <view class="avatar" bindtap="chooseAvatar">
+        <view class="avatar_selecte">
+          please select image
+        </view>
+        <image mode="aspectFill" src="{{ userPorfileForm['avatarURL'] }}" class="image"></image>
+      </view>
+    </view>
+  </view>
+  <view class="profileForm_container">
+    <view class="container_width91">
+      <form class="profile_form topbottom_list">
+        <view class="tb_item">
+          <view class="tb_title">Username</view>
+          <view class="tb_content">
+            <input disabled type="text" value="Administrator" placeholder="please enter your username" />
+          </view>
+        </view>
+        <view class="tb_item">
+          <view class="tb_title">Nickname</view>
+          <view class="tb_content">
+            <input type="text" value="哈哈哈哈哈哈哈" placeholder="please enter your nickname" />
+          </view>
+        </view>
+        <view class="tb_item sex_radio_item">
+          <view class="tb_title">Sex</view>
+          <view class="tb_content">
+            <radio-group class="sex_radiogroup">
+              <p>
+                <radio id="male_radio" value="male" />
+                <label for="male_radio">Male</label>
+              </p>
+              <p>
+                <radio id="female_radio" value="female" />
+                <label for="female_radio">Female</label>
+              </p>
+            </radio-group>
+          </view>
+        </view>
+        <view class="tb_item ">
+          <view class="tb_title">Birthday</view>
+          <view class="tb_content">
+            <picker mode="date" value="{{ userPorfileForm['birthday'] }}">
+              {{ userPorfileForm['birthday'] }}
+            </picker>
+          </view>
+        </view>
+      </form>
+      <view class="save_btn button_normal button_09BB07">
+        Save
+      </view>
+    </view>
+  </view>
+  <view class="user_bgimage">
+    <image mode="aspectFill" class="bg_image" src="{{ userPorfileForm['bgImage'] }}" ></image>
+  </view>
+  <view class="user_chooseimage_mask" bindtap="chooseBGImage">
+    <view class="tips" >
+      please select image
+    </view>
+  </view>
+</view>
